@@ -1,0 +1,1 @@
+CREATE POLICY "Documents require verified browser API" ON storage.objects AS RESTRICTIVE FOR ALL TO anon, authenticated USING (bucket_id <> 'farmer-documents') WITH CHECK (bucket_id <> 'farmer-documents');
